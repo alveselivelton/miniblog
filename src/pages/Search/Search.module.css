@@ -14,7 +14,7 @@
 }
 
 .search_container p {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .noposts {
@@ -25,5 +25,6 @@
   .search_container {
     width: 90%;
     margin: 0 auto;
+    text-align: center;
   }
 }

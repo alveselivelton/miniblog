@@ -39,6 +39,10 @@
     width: 100%;
   }
 
+  .post_detail a {
+    width: 90px;
+  }
+
   .tags {
     display: flex;
     justify-content: center;
