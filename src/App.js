@@ -24,6 +24,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Search from "./pages/Search/Search";
 import Post from "./pages/Post/Post";
 import EditPost from "./pages/EditPost/EditPost";
+import Loading from "./components/Loading";
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -38,7 +39,7 @@ function App() {
   }, [auth]);
 
   if (loadingUser) {
-    return <p>Carregando...</p>;
+    return <Loading />;
   }
 
   return (

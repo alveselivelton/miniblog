@@ -8,6 +8,7 @@ import { useFetchDocuments } from "../../hooks/useFetchDocuments";
 
 // components
 import PostDetail from "../../components/PostDetail";
+import Loading from "../../components/Loading";
 
 const Home = () => {
   const [query, setQuery] = useState("");
@@ -35,7 +36,7 @@ const Home = () => {
         <button className="btn btn-dark">Pesquisar</button>
       </form>
       <div>
-        {loading && <p>Carregando...</p>}
+        {loading && <Loading />}
         {posts && posts.map((post) => <PostDetail key={post.id} post={post} />)}
         {posts && posts.length === 0 && (
           <div className={styles.noposts}>
