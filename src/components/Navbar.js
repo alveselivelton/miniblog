@@ -12,14 +12,14 @@ import { useEffect } from "react";
 const Navbar = () => {
   const { user } = useAuthValue();
   const { logout } = useAuthentication();
-  const [menu, setMunu] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
 
   const location = useLocation();
 
   const { pathname } = location;
 
   useEffect(() => {
-    setMunu(false);
+    setOpenMenu(false);
   }, [pathname]);
 
   return (
@@ -29,7 +29,7 @@ const Navbar = () => {
       </NavLink>
       <ul
         className={
-          menu ? `${styles.nav_menu} ${styles.actived}` : styles.nav_menu
+          openMenu ? `${styles.nav_menu} ${styles.actived}` : styles.nav_menu
         }
       >
         <li className={styles.nav_item}>
@@ -96,9 +96,11 @@ const Navbar = () => {
       </ul>
       <div
         className={
-          menu ? `${styles.hamburguer} ${styles.actived}` : styles.hamburguer
+          openMenu
+            ? `${styles.hamburguer} ${styles.actived}`
+            : styles.hamburguer
         }
-        onClick={() => (!menu ? setMunu(true) : setMunu(false))}
+        onClick={() => (!openMenu ? setOpenMenu(true) : setOpenMenu(false))}
       >
         <span className={styles.bar}></span>
         <span className={styles.bar}></span>
