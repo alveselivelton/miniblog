@@ -16,6 +16,10 @@ textarea:focus {
   outline: none;
 }
 
+input:-webkit-autofill {
+  -webkit-background-clip: text;
+}
+
 a,
 nav button {
   text-decoration: none;
@@ -57,7 +61,7 @@ textarea {
   border: none;
   border-bottom: 1px solid #ccc;
   padding: 0.8em 0;
-  background-color: transparent;
+  background-color: #f6fcff;
 }
 
 .btn {

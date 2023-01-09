@@ -38,11 +38,10 @@ export const useDeleteDocument = (docCollection) => {
     });
 
     try {
-      const deletedDocument = await deleteDoc(doc(db, docCollection, id));
+      await deleteDoc(doc(db, docCollection, id));
 
       checkCancelBeforeDispatch({
         type: "DELETED_DOC",
-        payload: deletedDocument,
       });
     } catch (error) {
       checkCancelBeforeDispatch({ type: "ERROR", payload: error.message });

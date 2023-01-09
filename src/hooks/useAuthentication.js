@@ -59,8 +59,8 @@ export const useAuthentication = () => {
         systemErrorMessage = "Ocorreu um erro, por favor tenta mais tarde.";
       }
 
-      setLoading(false);
       setError(systemErrorMessage);
+      setLoading(false);
     }
   };
 
